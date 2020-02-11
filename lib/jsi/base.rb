@@ -150,13 +150,13 @@ module JSI
     # JSI::JSON::Pointer pointing to this JSI's instance within the jsi_document
     attr_reader :jsi_ptr
 
-    # a JSI which is an ancestor_jsi of this
+    # a JSI which is an ancestor of this in the document containing this JSI (usually the JSI at the root of the document)
     attr_reader :ancestor_jsi
 
     alias_method :node_document, :jsi_document
     alias_method :node_ptr, :jsi_ptr
 
-    # the instance of the json-schema
+    # the instance of the json-schema - the underlying JSON data used to instantiate this JSI
     alias_method :jsi_instance, :node_content
     alias_method :instance, :node_content
 
